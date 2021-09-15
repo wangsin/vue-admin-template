@@ -62,16 +62,22 @@ export const constantRoutes = [
     meta: { title: '追溯', icon: 'el-icon-s-help' },
     children: [
       {
-        path: 'table',
-        name: 'Table',
+        path: 'company',
+        name: 'Company',
         component: () => import('@/views/table/index'),
         meta: { title: '公司', icon: 'el-icon-s-shop' }
       },
       {
-        path: 'tree',
-        name: 'Tree',
-        component: () => import('@/views/tree/index'),
+        path: 'driver',
+        name: 'Driver',
+        component: () => import('@/views/trace/driver/index'),
         meta: { title: '司机', icon: 'el-icon-s-custom' }
+      },
+      {
+        path: 'inner',
+        name: 'Inner',
+        component: () => import('@/views/trace/admin/index'),
+        meta: { title: '内部系统', icon: 'el-icon-s-platform' }
       }
     ]
   },
